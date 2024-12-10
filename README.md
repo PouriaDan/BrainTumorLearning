@@ -51,7 +51,7 @@ These models were chosen based on their proven effectiveness in image classifica
 
 ## Limitation:
 
-## SetUp:
+## Setup:
 The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensuring efficient handling of the computationally intensive tasks.
 
 
@@ -61,5 +61,6 @@ The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensu
 - Now, our files are ready to use.
 
 ## References:
+
 https://github.com/SartajBhuvaji/Brain-Tumor-Classification-Using-Deep-Learning-Algorithms
 
