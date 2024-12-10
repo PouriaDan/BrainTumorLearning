@@ -17,8 +17,10 @@ Importance and Potential Impact of the Project
 
 
 ## Dataset
-- The dataset for tumor classification can be accessed from https://www.kaggle.com/code/thomasdubail/creating-brain-tumors-dataset
 
+### Classification
+
+The dataset for tumor classification can be accessed from https://www.kaggle.com/code/thomasdubail/creating-brain-tumors-dataset
 This dataset is designed for advanced medical research, containing MRI images across four classes: 
 
 - Pituitary: Abnormal growth of cells in the pituitary gland
@@ -26,41 +28,53 @@ This dataset is designed for advanced medical research, containing MRI images ac
 - Meningioma: Tumor that grows in the meninges
 - Normal: No tumor
   
-![image](https://github.com/user-attachments/assets/599c46cb-205f-4c50-b80e-263438e9c2be)
+The data distribution is as follows:
 
-- The dataset for tumor segmentation can be accessed from
-
-![image](https://github.com/user-attachments/assets/ad8adcab-ecef-4dc4-89bf-b5f87c787d26)
+![image](images\data_dist.png)
 
 
-## Method
+Some samples of each class:
 
-- **Tumor Classification**: Implementing Convolutional Neural Networks, training from scratch and fine-tuning existing models to develop baseline models
-Experimenting with Transformer-based architectures, which may not necessarily outperform CNNs or even prove to be beneficial for this task, but can be a valuable experiment.
-- **Tumor Segmentation**: Using Pixel-Wise classification models such as Unet, to classify MRI images to two regions of tumor and non-tumor.
-Utilizing region based CNNs, such as Mask R-CNNs, for both classification and segmentation.
-Comparing these two approaches with transformer-based segmentation models.
+![image](images\classification_samples.png)
 
-## Models
+- The dataset for tumor segmentation can be accessed from (here)['https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation/data']
 
+## Methodology
 
-## Rationals
-These models were chosen based on their proven effectiveness in image classification tasks, particularly in the medical field. .... are known for their performance in many computer vision applications, while they offer the flexibility to learn complex features from images.
+### Models
 
-## Results and Conclusion:
-- Classification performance:
-- Segmentation performance :
+We used our models based on their proven effectiveness in image classification tasks, particularly in the medical field. For example for segmentation, we started with different implementation of UNet which is proved to be effective in different task of medical segmentation.
 
-## Limitation:
+- **Tumor Classification**: For tumor classification, we have used a range of different models, from different vesion of ResNet and Vision Transformers. Since we noticed no advantage in using more complex models, we settled on a smaller residual convolutional network and trained it from scratch.
+- **Tumor Segmentation**: We used Pixel-Wise classification models such as Unet ans Mask-RCNN. We first used our classification netwok as the UNet's encoder and build the decoder based on that. However, we noticed that the model was not able to converge on the segmentation dataset. Our final model utilized ResNet50, loaded with weights from training on imagenet.
 
-## Setup:
+### Hyperparameters
+
+We compiled ou models using different optimizers (SGD, RMSprop, Adam, ADOPT) and various learnign rate schedulers. We noticed that Adam and ADOPT performed best paired with our models. For scheduliong the learning rate, we used a linear warmup for 25% of the training, then gradually decrease the learning rate during the end of the training. Our base learning rate is 0.001.
+
+### Setup:
 The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensuring efficient handling of the computationally intensive tasks.
 
 
+## Results and Conclusion:
+- Classification performance: We were able to achieve about 92.% accuracy.
+
+![image](images\training_curve_classification.png)
+
+![image](images\classification_results.png)
+
+- Segmentation performance: We were able to achieve an IoU of 0.5
+
+![image](images\training_curve_segmentation.png)
+
+![image](images\segmentation_results.png)
+
 ## How to use:
 - Download the dataset from the provided link.
-- Download all notebook files in the same folder.
-- Now, our files are ready to use.
+- clone this repository
+- Run the classification and segmentation notebook.
+
+Python scripts will be added in the future to enable runnig the scipts in the command line environment.
 
 ## References:
 
