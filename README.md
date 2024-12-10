@@ -61,14 +61,14 @@ Download the datasets and put them in the following structure:
 ```
 - Data/
     - Classification/
-        - glioma_tumor\
-        - meningioma_tumor\
-        - normal\
-        - pituitary_tumor\
+        - glioma_tumor/
+        - meningioma_tumor/
+        - normal/
+        - pituitary_tumor/
     - Segmentation/
-        - test\
-        - train\
-        -valid\
+        - test/
+        - train/
+        -valid/
         -README.txt
 ```
 
