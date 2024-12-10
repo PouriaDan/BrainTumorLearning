@@ -30,7 +30,7 @@ This dataset is designed for advanced medical research, containing MRI images ac
   
 The data distribution is as follows:
 
-![image](images\data_dist.png)
+![image](images/data_dist.png)
 
 
 Some samples of each class:
