@@ -70,7 +70,7 @@ Prepare the virtual environment:
 You can use the provided YAML file to create the environemt:
 ```shell
 conda env create -f environment.yml
-conda activate infant_denoising
+conda activate datascience
 ```
 
 Download the datasets and put them in the following structure:
@@ -100,7 +100,7 @@ We used our models based on their proven effectiveness in image classification t
 
 ### Hyperparameters
 
-We compiled ou models using different optimizers (SGD, RMSprop, Adam, ADOPT) and various learnign rate schedulers. We noticed that Adam and ADOPT performed best paired with our models. For scheduliong the learning rate, we used a linear warmup for 25% of the training, then gradually decrease the learning rate during the end of the training. Our base learning rate is 0.001.
+We compiled our models using different optimizers (SGD, RMSprop, Adam, ADOPT) and various learnign rate schedulers. We noticed that Adam and ADOPT performed best paired with our models. For scheduliong the learning rate, we used a linear warmup for 25% of the training, then gradually decrease the learning rate during the end of the training. Our base learning rate is 0.001.
 
 ### Setup:
 The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensuring efficient handling of the computationally intensive tasks.
@@ -113,7 +113,7 @@ The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensu
 
 ![image](images/classification_results.png)
 
-- Segmentation performance: We were able to achieve an IoU of 0.5
+- Segmentation performance: We were able to achieve an IoU (Intersection over Union) of 0.5
 
 ![image](images/training_curve_segmentation.png)
 
@@ -130,10 +130,9 @@ Python scripts will be added in the future to enable runnig the scipts in the co
 
 Our segmentation can be improved. Due to computational issues, we were not able to train more complex models. However, beside the complexity of the utilized model ,we believe the size of the dataset also affects the training results.   
 For both classification and segmentation, we tested Vision-based transformers. however, the results were either on par or weaker compared to the models we have reported here.  
-We also tried to apply yhe segmentation model on the samples from the classification model, but due to the domain differences (Mainly the difference in the view), segmentation results on the classification dataset were weak.
+We also tried to apply the segmentation model on the samples from the classification model, but due to the domain differences (Mainly the difference in the view), segmentation results on the classification dataset were weak.
 
 ## References:
 
 https://www.kaggle.com/datasets/thomasdubail/brain-tumors-256x256   
 https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation/data
-
