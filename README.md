@@ -1,4 +1,4 @@
-# Brain Tumor Classification and Segnemtation
+# Brain Tumor Classification and Segmentation
 
 ### Contributors:
 **Pooria Daneshvar Kakhaki**
