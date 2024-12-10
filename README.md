@@ -1,9 +1,14 @@
 # Brain Tumor Classification and Segmentation
 
-### Contributors:
-**Pooria Daneshvar Kakhaki**
+Codes and experiments for the DS5220 course:
+Pooria daneshvar Kakhaki and Neda Ghohabi Esfahani
 
-**Neda Ghohabi Esfahani**
+Contact:  
+**Pooria daneshvar Kakhaki**  
+Email: [daneshvarkakhaki.p@northeastern.edu](mailto:daneshvarkakhaki.p@northeastern.edu)  
+**Neda Ghohabi Esfahani**  
+Email: [ghohabiesfahani.n@northeastern.edu](mailto:ghohabiesfahani.n@northeastern.edu)
+
 
 ## Introduction: 
 Brain tumors are among the most aggressive diseases, with over 84,000 individuals expected to receive a primary brain tumor diagnosis in 2021 and approximately 18,600 estimated to lose their lives to malignant brain tumors (brain cancer) during the same year [8]. Magnetic Resonance Imaging (MRI) remains the most effective method for detecting brain tumors. Unlike other cancers, brain tumors often result in profound and lasting physical, cognitive, and psychological effects on patients. Therefore, early diagnosis and the development of optimal treatment plans are crucial to improving both life expectancy and quality of life for these individuals. Neural networks have demonstrated remarkable accuracy in image classification and segmentation tasks, making them highly valuable in advancing brain tumor detection and analysis.
@@ -20,7 +25,7 @@ Importance and Potential Impact of the Project
 
 ### Classification
 
-The dataset for tumor classification can be accessed from https://www.kaggle.com/code/thomasdubail/creating-brain-tumors-dataset
+The dataset for tumor classification can be accessed from [Kaggle](https://www.kaggle.com/datasets/thomasdubail/brain-tumors-256x256).
 This dataset is designed for advanced medical research, containing MRI images across four classes: 
 
 - Pituitary: Abnormal growth of cells in the pituitary gland
@@ -37,7 +42,35 @@ Some samples of each class:
 
 ![image](images/classification_samples.png)
 
-- The dataset for tumor segmentation can be accessed from (here)['https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation/data']
+### Segmentation
+
+- The dataset for tumor segmentation can be accessed from [Kaggle](https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation).
+
+## Environment
+
+Prepare the virtual environment:
+
+You can use the provided YAML file to create the environemt:
+```shell
+conda env create -f environment.yml
+conda activate infant_denoising
+```
+
+Download the datasets and put them in the following structure:
+
+```
+- Data/
+    - Classification/
+        - glioma_tumor\
+        - meningioma_tumor\
+        - normal\
+        - pituitary_tumor\
+    - Segmentation/
+        - test\
+        - train\
+        -valid\
+        -README.txt
+```
 
 ## Methodology
 
