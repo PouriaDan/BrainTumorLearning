@@ -9,6 +9,23 @@ Email: [daneshvarkakhaki.p@northeastern.edu](mailto:daneshvarkakhaki.p@northeast
 **Neda Ghohabi Esfahani**  
 Email: [ghohabiesfahani.n@northeastern.edu](mailto:ghohabiesfahani.n@northeastern.edu)
 
+## Table of Contents
+
+1. [Introduction](#introduction)  
+2. [Motivations](#motivations)  
+3. [Dataset](#dataset)  
+   - [Classification](#classification)  
+   - [Segmentation](#segmentation)  
+4. [Environment](#environment)  
+5. [Methodology](#methodology)  
+   - [Models](#models)  
+   - [Hyperparameters](#hyperparameters)  
+   - [Setup](#setup)  
+6. [Results and Conclusion](#results-and-conclusion)  
+7. [How to Use](#how-to-use)  
+8. [Limitations and Future work:](#limitations-and-future-work)
+9. [References](#references)  
+
 
 ## Introduction: 
 Brain tumors are among the most aggressive diseases, with over 84,000 individuals expected to receive a primary brain tumor diagnosis in 2021 and approximately 18,600 estimated to lose their lives to malignant brain tumors (brain cancer) during the same year [8]. Magnetic Resonance Imaging (MRI) remains the most effective method for detecting brain tumors. Unlike other cancers, brain tumors often result in profound and lasting physical, cognitive, and psychological effects on patients. Therefore, early diagnosis and the development of optimal treatment plans are crucial to improving both life expectancy and quality of life for these individuals. Neural networks have demonstrated remarkable accuracy in image classification and segmentation tasks, making them highly valuable in advancing brain tumor detection and analysis.
@@ -109,7 +126,14 @@ The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensu
 
 Python scripts will be added in the future to enable runnig the scipts in the command line environment.
 
+## Limitations and Future work:
+
+Our segmentation can be improved. Due to computational issues, we were not able to train more complex models. However, beside the complexity of the utilized model ,we believe the size of the dataset also affects the training results.   
+For both classification and segmentation, we tested Vision-based transformers. however, the results were either on par or weaker compared to the models we have reported here.  
+We also tried to apply yhe segmentation model on the samples from the classification model, but due to the domain differences (Mainly the difference in the view), segmentation results on the classification dataset were weak.
+
 ## References:
 
-https://github.com/SartajBhuvaji/Brain-Tumor-Classification-Using-Deep-Learning-Algorithms
+https://www.kaggle.com/datasets/thomasdubail/brain-tumors-256x256   
+https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation/data
 
