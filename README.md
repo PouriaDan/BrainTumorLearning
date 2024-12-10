@@ -35,7 +35,7 @@ The data distribution is as follows:
 
 Some samples of each class:
 
-![image](images\classification_samples.png)
+![image](images/classification_samples.png)
 
 - The dataset for tumor segmentation can be accessed from (here)['https://www.kaggle.com/datasets/pkdarabi/brain-tumor-image-dataset-semantic-segmentation/data']
 
@@ -59,15 +59,15 @@ The Models were trained and tested on a GPU enabled environmen t in Kaggle, ensu
 ## Results and Conclusion:
 - Classification performance: We were able to achieve about 92.% accuracy.
 
-![image](images\training_curve_classification.png)
+![image](images/training_curve_classification.png)
 
-![image](images\classification_results.png)
+![image](images/classification_results.png)
 
 - Segmentation performance: We were able to achieve an IoU of 0.5
 
-![image](images\training_curve_segmentation.png)
+![image](images/training_curve_segmentation.png)
 
-![image](images\segmentation_results.png)
+![image](images/segmentation_results.png)
 
 ## How to use:
 - Download the dataset from the provided link.
